@@ -2,7 +2,13 @@
 #include <vector>
 using namespace std;
 
-// 나의 코드
+void printVector(vector<int> &v) {
+    for(int i = 0; i < v.size(); i++)
+        cout << v[i] << " ";
+    cout << "\n";
+}
+
+// 나의 코드 //
 void InsertionSort(vector<int> &v) {
     int temp; int sorted;
 
@@ -24,10 +30,12 @@ void InsertionSort(vector<int> &v) {
         // 해당 인덱스에 넣기
         if(idx != sorted)
             v[sorted] = temp;
+
+        printVector(v);
     }
 }
 
-// 교수님의 코드
+// 교수님의 코드 //
 void InsertionSort(vector<int> &A) {
     int i; int key;
 
@@ -44,6 +52,8 @@ void InsertionSort(vector<int> &A) {
         }
 
         A[i + 1] = key;
+
+        printVector(A);
     }
 }
 
@@ -52,6 +62,7 @@ int main(void) {
     
     InsertionSort(v);
 
+    cout << "=== Result ===" << "\n";
     for(int i = 0; i < v.size(); i++) {
         cout << v[i] << " ";
     }
