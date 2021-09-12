@@ -21,7 +21,7 @@ void SWAP(vector<int> &A, int n1, int n2) {
 void MaxHeapify(vector<int> &A, int idx, int heap_size) {
     int left = 2 * idx;
     int right = 2 * idx + 1;
-    int largest; int temp;
+    int largest;
 
     if(left <= heap_size && A[left] > A[idx])
         largest = left;
