@@ -23,9 +23,9 @@ void CountingSort(vector<int> &A, int k) {
     // 4. 배정하기
     vector<int> B(A.size() + 1, 0);
     
-    for(int k = A.size() - 1; k >= 0; k--) {
-        B[C[A[k]]] = A[k];
-        C[A[k]] = C[A[k]] - 1;
+    for(int n = A.size() - 1; n >= 0; n--) {
+        B[C[A[n]]] = A[n];
+        C[A[n]] = C[A[n]] - 1;
     }
 
     printVector(B);
